@@ -1,0 +1,19 @@
+%apprun questionary_demo 
+    python3 $SCIF_APPBIN/questionary_demo.py $@ 2>&1
+
+%applabels questionary_demo
+    MAINTAINER pgierz
+    VERSION 1.0
+%apphelp questionary_demo
+    This is an example "Hello World" application using questionary. You can install it to a 
+    Scientific Filesystem (scif) with the command:
+        scif install questionary_demo.scif
+    It takes one argument, it will just print Hello, {name}! with the argument when you
+    run it. To do that:
+        scif run questionary_demo
+    if you need to install scif:
+        pip install scif
+    That step is already done for you in the container. `scif` is the default
+    entry point, so you can just use:
+        docker <options> <container_name> run questionary_demo
+
